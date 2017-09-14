@@ -9,5 +9,7 @@
 		$subject = 'Email de ST.OMG';
 		
 		$body = "From: $name\n E-Mail: $email\n Message:\n $msg";
+		
+		mail ($to, $subject, $body, $from);
 	}
 ?>
