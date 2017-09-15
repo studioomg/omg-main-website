@@ -11,3 +11,9 @@ RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
 # END HTTPS REDIRECT
+
+# BEGIN CACHE CONFIG
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+Header set Cache-Control "max-age=28800"
+</FilesMatch>
+# END CACHE CONFIG
