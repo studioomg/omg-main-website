@@ -19,7 +19,7 @@ $(function() {
         if (error){
         	updateTextPopup('Oops!', msg);
         }else{
-            var url = 'send_mail.php',
+            var url = 'envia_email.php',
             	name = $.trim($this.find('input[name="name"]').val()),
             	email = $.trim($this.find('input[name="email"]').val()),
             	subject = ($this.find('input[name="subject"]').length)?$.trim($this.find('input[name="subject"]').val()):'',
