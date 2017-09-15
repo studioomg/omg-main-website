@@ -1,19 +1,6 @@
-# BEGIN HTTPS REDIRECT
-<IfModule mod_rewrite.c>
-RewriteCond %{HTTPS} off
-# First rewrite to HTTPS:
-# Don't put www. here. If it is already there it will be included, if not
-# the subsequent rule will catch it.
-RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# Now, rewrite any request to the wrong domain to use www.
-# [NC] is a case-insensitive match
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-</IfModule>
-# END HTTPS REDIRECT
-
-# BEGIN CACHE CONFIG
-<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
-Header set Cache-Control "max-age=28800"
-</FilesMatch>
-# END CACHE CONFIG
+# BEGIN REDIRECT HTTPS + WWW
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.studioomg\.com.br$ [NC]
+RewriteRule ^(.*)$ https://www.studioomg.com.br/$1 [L,R=301]
+# END REDIRECT HTTPS + WWW
