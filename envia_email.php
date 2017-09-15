@@ -10,10 +10,10 @@ if($subject!='') $mail_subject = $subject;
 else $mail_subject = 'Contact form of website';
 $text = strip_tags(trim($_POST['message']));
 
-$message = "<h3>CONTACT FORM WAS SUBMITTED</h3>"."<br>";
-$message .= "<b>Name:</b> ".$name."<br>";
+$message = "<h3>EMAIL ENVIADO PELO SITE</h3>"."<br>";
+$message .= "<b>Nome:</b> ".$name."<br>";
 $message .= "<b>Email:</b> ".$email."<br>";
-$message .= "<b>Message:</b> ".$text."<br>";
+$message .= "<b>Mensagem:</b><br> ".$text."<br>";
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
