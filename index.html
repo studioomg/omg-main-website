@@ -219,7 +219,7 @@
                     
                     <div class="full-size-banner-entry full-size valign-middle" style="background-image: url('img/home-banner.jpg');">
                         <div class="full-size video-wrapper shadow hidden-xs">
-                            <video loop autoplay muted>
+                            <video loop autoplay muted preload="">
                                 <source src="video/site-home-video.mp4" type="video/mp4" />
                             </video>
                         </div>
@@ -239,6 +239,7 @@
                 <div class="swiper-pagination swiper-pagination-white visible-xs"></div>
             </div>
         </div>
+        
         
  
         <!-- FOOTER -->
@@ -291,6 +292,15 @@
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/global.js"></script>
+    <script src="js/is_mobile.js"></script>
+    
+    <script>
+        if( mobilecheck(true) ) {
+            console.log('Mobile');
+        } else {
+            console.log('Desktop');
+        }
+    </script>
 
     <!-- CONTACT -->
     <script src="contact.form.js"></script>
