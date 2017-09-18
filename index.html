@@ -50,6 +50,23 @@
         <link href="css/ie9.css" rel="stylesheet" type="text/css" />
     <![endif]-->
     <link rel="shortcut icon" href="favico.png" />
+    
+    <!--mobile video handler-->
+    <script src="js/is_mobile.js"></script>
+    <script>
+        
+            if (window.mobilecheck(true)) {
+              console.log('1');
+              document.getElementById("home-video").setAttribute('preload', 'none');
+            } else {
+              console.log('2');
+              document.getElementById("home-video").setAttribute('preload', 'auto');
+            };
+       
+    </script>
+    
+    
+    
   	<title>ST.OMG - Visual Design</title>
 </head>
 <body class="fonts-8">
@@ -292,19 +309,6 @@
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/global.js"></script>
-    <script src="js/is_mobile.js"></script>
-    
-    <script>
-        
-            if (window.mobilecheck(true)) {
-              console.log('1');
-              document.getElementById("home-video").setAttribute('preload', 'none');
-            } else {
-              console.log('2');
-              document.getElementById("home-video").setAttribute('preload', 'auto');
-            };
-       
-    </script>
 
     <!-- CONTACT -->
     <script src="contact.form.js"></script>
