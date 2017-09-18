@@ -51,22 +51,6 @@
     <![endif]-->
     <link rel="shortcut icon" href="favico.png" />
     
-    <!--mobile video handler-->
-    <script src="js/is_mobile.js"></script>
-    <script>
-        
-            if (window.mobilecheck(true)) {
-              console.log('1');
-              document.getElementById("home-video").setAttribute('preload', 'none');
-            } else {
-              console.log('2');
-              document.getElementById("home-video").setAttribute('preload', 'auto');
-            };
-       
-    </script>
-    
-    
-    
   	<title>ST.OMG - Visual Design</title>
 </head>
 <body class="fonts-8">
@@ -235,10 +219,8 @@
                     </nav>
                     
                     <div class="full-size-banner-entry full-size valign-middle" style="background-image: url('img/home-banner.jpg');">
-                        <div class="full-size video-wrapper shadow hidden-xs">
-                            <video id="home-video" loop autoplay muted preload="auto">
-                                <source src="video/site-home-video.mp4" type="video/mp4" />
-                            </video>
+                        <div id="home-video" class="full-size video-wrapper shadow hidden-xs">
+                            
                         </div>
                         <div class="valign-text-wrapper text-center">
                             <div class="row">
@@ -309,6 +291,20 @@
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/global.js"></script>
+    <!--mobile video handler-->
+    <script src="js/is_mobile.js"></script>
+    <script>
+        
+            if (window.mobilecheck(true)) {
+              console.log('1');
+              document.getElementById("home-video").innerHTML = 
+              "<video loop autoplay muted preload='auto'><source src='video/site-home-video.mp4' type='video/mp4' /></video>"
+            } else {
+              console.log('2');
+
+            };
+       
+    </script>
 
     <!-- CONTACT -->
     <script src="contact.form.js"></script>
