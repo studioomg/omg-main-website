@@ -296,12 +296,12 @@
     <script>
         
             if (window.mobilecheck(true)) {
-              console.log('1');
+              console.log('Mobile - Video removed');
+              
+            } else {
+              console.log('Desktop - video added');
               document.getElementById("home-video").innerHTML = 
               "<video loop autoplay muted preload='auto'><source src='video/site-home-video.mp4' type='video/mp4' /></video>"
-            } else {
-              console.log('2');
-
             };
        
     </script>
