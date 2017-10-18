@@ -1,0 +1,19 @@
+                <div class="sorting-item filter-2" style="display:hidden;">
+                    <div class="portfolio-landing-entry-1 style-2">
+                        <a class="mouseover poster-3d lightbox" data-offset="5" href="case-ribalta.html" style="background-image: url('img/portfolio/ribalta-cover.jpg');">
+                            <span class="layer-1 full-size" data-offset="10">
+                                <span class="mouseover-helper-frame"></span>
+                            </span>
+                            <span class="layer-1 full-size" data-offset="20">
+                                <span class="mouseover-helper-icon"></span>
+                            </span>
+                        </a>
+                        <div class="text-content text-center">
+                            <div class="simple-article small grey">Redes sociais / Branding Multi-plataforma</div>
+                            <div class="empty-soace col-xs-b15"></div>
+                            <div class="h5"><b><a class="mouseover-simple size-1" href="case-ribalta.html"><b>RIBALTA</b></a></b></div>
+                            <div class="empty-soace col-xs-b15"></div>
+                            <div class="simple-article large grey">Criação de Key Visual para redes sociais e Webdesign</div>
+                        </div>
+                    </div>
+                 </div>
